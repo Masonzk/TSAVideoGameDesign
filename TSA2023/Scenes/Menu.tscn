@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Code/Menu.gd" type="Script" id=1]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 84.0
+text = "DEMO LEVEL 1"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 96.0
+margin_right = 256.0
+margin_bottom = 116.0
+text = "DEMO LEVEL 2"
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 288.0
+margin_top = 64.0
+margin_right = 896.0
+margin_bottom = 224.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 296.0
+margin_top = 72.0
+margin_right = 888.0
+margin_bottom = 216.0
+text = "DEMO INSTRUCTIONS
+
+Bouncers on side of screen contain values which will change the value of the ball.
+The balls must enter the collection zone with the corresponding value.
+Not all bouncers need to be used.
+
+(Current demo has no way to win and no art currently. The purpose is to test mechanics and make sure the game is fun.)"
+autowrap = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
